@@ -2,77 +2,267 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Fundación Kinal</title>
+    <title>Fundación Kinal | Formación Técnica</title>
     <link rel="stylesheet" href="styles/kinal.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
+<div class="top-bar">
+    <p>🚀 Inscripciones abiertas para el ciclo 2026 - <a href="#contacto">Más información</a></p>
+</div>
 
 <header class="navbar">
     <div class="logo">FUNDACIÓN <span>KINAL</span></div>
     <nav>
-        <a href="biografia.html">Biografia Personal</a>
-        <a href="index.html">Pagina de Inicio</a>
-        <a href="https://www.kinal.academy" target="_blank" rel="noopener noreferrer">Pagina de Alumnos</a>
-        <a href="#">Antiguos alumnos</a>
-        <a href="#">Bolsa de empleos</a>
-        <a href="#">Blog</a>
+        <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+        <a href="biografia.html">Biografía</a>
+        <a href="https://www.kinal.academy" target="_blank">Academia</a>
+        <a href="#programas">Programas</a>
+        <a href="https://www.google.com/maps/dir//Fundaci%C3%B3n+Kinal,+6A+Avenida+13-54,+Cdad.+de+Guatemala+01007/" target="_blank"> Ubicación
+        </a>
     </nav>
 </header>
 
 <section class="hero">
     <div class="hero-overlay">
-        <h1>FUNDACIÓN <span>KINAL</span></h1>
+        <h1>TRABAJO Y <span>SERVICIO</span></h1>
+        <p>Formando técnicos líderes para Guatemala</p>
+        <button class="btn-primary" onclick="openModal()">SOLICITAR INFORMACIÓN</button>
+    </div>
+</section>
+
+<section class="valores">
+    <div class="valor-item">
+        <i class="fas fa-gear"></i>
+        <h4>Excelencia Técnica</h4>
+    </div>
+    <div class="valor-item">
+        <i class="fas fa-heart"></i>
+        <h4>Formación Humana</h4>
+    </div>
+    <div class="valor-item">
+        <i class="fas fa-briefcase"></i>
+        <h4>Inserción Laboral</h4>
     </div>
 </section>
 
 <section class="intro">
     <h2>TU CAMINO AL ÉXITO ESTÁ EN KINAL</h2>
-    <p>
-        Kinal es un Centro Educativo privado, no lucrativo, dirigido a la formación técnica profesional
-        de jóvenes y adultos.
-    </p>
+    <p>Kinal es un Centro Educativo privado, no lucrativo, dirigido a la formación técnica profesional de jóvenes y adultos.</p>
 </section>
 
-<section class="programas">
-    <div class="card">
-        <img src="images/basicos.jpg" alt="Ciclo Básico" class="card-img">
-        <h3>CICLO BÁSICO</h3>
-        <p>Educación General Básica.</p>
-        <button>CONOCE MÁS</button>
+<section id="programas" class="programas-container">
+    <div class="section-title">
+        <h2>NUESTRA OFERTA EDUCATIVA</h2>
+        <p>Formación técnica de alta calidad con valores cristianos</p>
     </div>
 
-    <div class="card">
-        <img src="images/diversificado.jpg" alt="Diversificado" class="card-img">
-        <h3>DIVERSIFICADO</h3>
-        <p>Formación técnica y académica.</p>
-        <button>CONOCE MÁS</button>
-    </div>
+    <div class="programas-grid">
+        
+        <article class="card">
+            <div class="card-tag"></div>
+            <img src="images/basicos.jpg" alt="Estudiantes de Ciclo Básico en Kinal" class="card-img">
+            <div class="card-body">
+                <i class="fas fa-book-open icon-category"></i>
+                <h3>CICLO BÁSICO</h3>
+                <p>Iniciación en talleres técnicos y formación académica sólida para adolescentes de 12 a 15 años.</p>
+                <ul class="card-features">
+                    <li><i class="fas fa-check"></i> Talleres de Rotación</li>
+                    <li><i class="fas fa-check"></i> Formación en Valores</li>
+                </ul>
+                <button class="btn-card" onclick="openModal()">Solicitar Pensum</button>
+            </div>
+        </article>
 
-    <div class="card">
-        <img src="images/tecnica.png" alt="Escuela Técnica" class="card-img">
-        <h3>ESCUELA TÉCNICA</h3>
-        <p>Especialidades técnicas.</p>
-        <button>CONOCE MÁS</button>
+        <article class="card highlight">
+            <div class="card-tag"></div>
+            <img src="images/diversificado.jpg" alt="Estudiante técnico de diversificado" class="card-img">
+            <div class="card-body">
+                <i class="fas fa-graduation-cap icon-category"></i>
+                <h3>DIVERSIFICADO</h3>
+                <p>Bachillerato Industrial y Perito en especialidades técnicas con alta demanda laboral.</p>
+                <ul class="card-features">
+                    <li><i class="fas fa-bolt"></i> Electricidad / Electrónica</li>
+                    <li><i class="fas fa-car"></i> Mecánica Automotriz</li>
+                    <li><i class="fas fa-code"></i> Computación / Dibujo</li>
+                </ul>
+                <button class="btn-card" onclick="openModal()">Ver Especialidades</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-tag"></div>
+            <img src="images/tecnica.png" alt="Capacitación técnica para adultos" class="card-img">
+            <div class="card-body">
+                <i class="fas fa-tools icon-category"></i>
+                <h3>ESCUELA TÉCNICA</h3>
+                <p>Cursos técnicos cortos y diplomados para adultos y técnicos que desean especializarse.</p>
+                <ul class="card-features">
+                    <li><i class="fas fa-clock"></i> Horarios Flexibles</li>
+                    <li><i class="fas fa-certificate"></i> Certificación Técnica</li>
+                </ul>
+                <button class="btn-card" onclick="openModal()">Cursos Disponibles</button>
+            </div>
+        </article>
+
     </div>
 </section>
 
+<section id="ubicacion" class="mapa-section">
+    <div class="section-title">
+        <h2>NUESTRA UBICACIÓN</h2>
+        <p>Visítanos en la zona 7, Ciudad de Guatemala</p>
+    </div>
+    
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.123456789!2d-90.5385169242!3d14.6257312858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a1e448821921%3A0xf0a429a1adad9241!2sFundaci%C3%B3n%20Kinal!5e0!3m2!1ses!2sgt!4v1700000000000!5m2!1ses!2sgt" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <div class="map-action">
+        <a href="https://www.google.com/maps/dir//Fundaci%C3%B3n+Kinal,+6A+Avenida+13-54,+Cdad.+de+Guatemala+01007" 
+           target="_blank" class="btn-primary">
+           <i class="fas fa-route"></i> CÓMO LLEGAR
+        </a>
+    </div>
+</section>
+
+<a href="https://whatsapp.com/channel/0029VbBXHP09sBI2VLf5cL3L" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<div id="modalInscripcion" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>¿Interesado en Kinal?</h3>
+        <p>Déjanos tus datos y nos comunicaremos contigo.</p>
+        <form id="contact-form">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <select>
+                <option>Ciclo Básico</option>
+                <option>Diversificado</option>
+                <option>Cursos Técnicos</option>
+            </select>
+            <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+    </div>
+</div>
 
 <section class="impacto">
-    <h2>JÓVENES BENEFICIADOS</h2>
+    <div class="impacto-header">
+        <h2>JÓVENES BENEFICIADOS</h2>
+        <p>Más de 60 años transformando vidas a través de la educación técnica</p>
+    </div>
+
     <div class="stats">
-        <div class="stat yellow">25k<br><span>Escuela Técnica</span></div>
-        <div class="stat wine">1500<br><span>Ciclo Básico</span></div>
-        <div class="stat blue">6k<br><span>Diversificado</span></div>
-        <div class="stat orange">+32k<br><span>Total</span></div>
+        <div class="stat">
+            <i class="fas fa-tools"></i>
+            <div class="stat-number">25k</div>
+            <div class="stat-label">Escuela Técnica</div>
+        </div>
+
+        <div class="stat">
+            <i class="fas fa-book"></i>
+            <div class="stat-number">1,500</div>
+            <div class="stat-label">Ciclo Básico</div>
+        </div>
+
+        <div class="stat">
+            <i class="fas fa-user-graduate"></i>
+            <div class="stat-number">6k+</div>
+            <div class="stat-label">Diversificado</div>
+        </div>
+
+        <div class="stat highlight-stat">
+            <i class="fas fa-users"></i>
+            <div class="stat-number">+32k</div>
+            <div class="stat-label">Egresados Totales</div>
+        </div>
+    </div>
+</section>
+
+<section id="gratuitos" class="programas-gratuitos">
+    <div class="gratuitos-content">
+        <div class="gratuitos-text">
+            <span class="badge">¡NUEVO!</span>
+            <h2>PROGRAMAS GRATUITOS</h2>
+            <p>
+                En Fundación Kinal creemos en la democratización del conocimiento. 
+                Accede a nuestras listas de reproducción con cursos técnicos, talleres 
+                y charlas de formación humana totalmente sin costo.
+            </p>
+            <ul class="gratuitos-list">
+                <li><i class="fab fa-youtube"></i> Cursos de Tecnología</li>
+                <li><i class="fab fa-youtube"></i> Talleres de Emprendimiento</li>
+                <li><i class="fab fa-youtube"></i> Cápsulas de Valores</li>
+            </ul>
+            <a href="https://youtube.com/@fundacionkinal-i7m?si=MV6bKoQZfy2c_HSk" 
+               target="_blank" 
+               class="btn-youtube">
+               <i class="fab fa-youtube"></i> IR AL CANAL OFICIAL
+            </a>
+        </div>
+        <div class="gratuitos-visual">
+            <div class="video-placeholder">
+                <i class="fas fa-play-circle"></i>
+                <span>CONTENIDO LIBRE</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section__header">
+        <h2 class="section__title">Rediseño de pagina:</h2>
+    </div>
+    <div class="section__content">
+        <p>
+            el rediseño que he propuesto ayuda demasiado a la informacion de los clientes, 
+            pueden contactar directamente por medio de una solicitud, saber la ubicacion 
+            del colegio tanto desde la barra de navegacion como desde el mapa que esta 
+            en el medio de la pagina
+        </p>
+        <p>
+            tambien nos permite dirigirnos a las paginas oficiales de kinal, tanto como 
+            sus redes sociales, como para la pagina que nosotros los alumnos utilizamos 
+            para hacer nuestras tareas
+        </p>
+        <ul class="list">
+            <li><i class="fab fa-whatsapp"></i> tambien he agregado el nuevo grupo de difusion de kinal para sexto en la ventana de whatsapp</li>
+        </ul>
+        <img src="images/kinal.png" alt="Icono de Rediseño" class="icon">
     </div>
 </section>
 
 <footer class="footer">
-    <p>Fundación Kinal © 2024 Todos los derechos reservados</p>
-    <p>Creado por Kenneth Mazariegos - 2021255 - IN6CM</p>
-    <p>Informatica 6to Grado</p>
+    <div class="footer-grid">
+        <div class="footer-info">
+            <p><strong>Fundación Kinal</strong> © 2024</p>
+            <p>6ta. Avenida 13-54 Colonia Landívar, Zona 7</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/share/1BRPhkWJAj/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/fundacionkinal?igsh=MXNuNXdtdmhqa3F1NQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@fundacionkinal-i7m?si=MV6bKoQZfy2c_HSk" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
 </footer>
+
+<script>
+    // Función simple para el Modal
+    function openModal() { document.getElementById('modalInscripcion').style.display = 'block'; }
+    function closeModal() { document.getElementById('modalInscripcion').style.display = 'none'; }
+</script>
 
 </body>
 </html>

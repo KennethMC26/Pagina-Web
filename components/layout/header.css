@@ -1,18 +1,27 @@
 .main-header {
-    background: linear-gradient(135deg, #2c7be5, #1a3c78);
+    background: linear-gradient(135deg, #1d2c5c, #1a3c78); 
     color: white;
     padding: 60px 20px;
     text-align: center;
-    border-radius: 16px;
+    border-bottom: 5px solid #f26c21;
     margin-bottom: 40px;
 }
 
-.main-header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
+.navbar {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.main-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
 }
+
+.navbar a:hover { color: #f26c21; }
